@@ -44,6 +44,12 @@ html,body{
     justify-content: space-between;
     padding-left: 100px;
 }
+@media (max-width: 992px){
+  .nour-nav{
+    padding-left: 0px;
+}
+}
+
 /*Top Nav Dropdown*/
 .nour-nav .dropbtn{
   width:auto;
@@ -299,10 +305,19 @@ font-family: 'Lato', ;
      /* width: 100% !important;*/
      margin-right: 74px !important;
   }
+  
   }
   /*responsive*/
-@media (max-width: 991.98px){
+@media (max-width: 992px){
   .content-wrapper{
     width:100% !important;
   }
+  .sidebar-mini.sidebar-collapse .content-wrapper, .sidebar-mini.sidebar-collapse .main-footer, .sidebar-mini.sidebar-collapse .main-header {
+    margin-left: 0rem!important;
+   /* width: 100% !important;*/
+   margin-right: 74px !important;
+}
+.main-sidebar{
+  overflow-x: hidden;
+}
 }
