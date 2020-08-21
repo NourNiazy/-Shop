@@ -16,7 +16,7 @@ html,body{
     padding: 7px 0px;
 }
   .edit-btn{
-    background: #4f5962;
+    background: hsl(210, 3%, 25%);
     color:  white;
     border: none;
     height:28px ;
@@ -170,14 +170,23 @@ html,body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #4f5962;
+  color: hsl(210, 3%, 25%);
 
 }
 .modal-content .register-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: #4f5962;
+    color: hsl(210, 3%, 25%);
+}
+.modal-content .register-form  option:disabled{
+  color: #b6b4b4 !important;
+}
+.modal-content .register-form  option{
+  color:  hsl(210, 3%, 25%) !important;
+}
+.modal-content .register-form  select{
+  color: hsl(210, 3%, 25%) !important;
 }
 .modal-content .register-form input{
   border: 1px solid #d1cfcf;
