@@ -1,0 +1,37 @@
+html,body{
+    direction: rtl !important;
+    text-align:right !important;
+    font-family: 'Almarai', sans-serif;
+}
+.img-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.img-div img{
+    border-radius: 50%;
+    height:150px;
+    width:150px;
+}
+.input-group{
+    border:1px solid rgb(206, 212, 218) !important;
+    box-sizing: border-box !important;
+    border-radius: 4px !important;
+}
+.form-control{
+    border: none !important;
+}
+.input-group-text{
+    border: none !important;
+}
+.spacebetween-div{
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    text-align: center !important;
+}
+.forgot-password {
+    margin-top: 10px !important;
+}
