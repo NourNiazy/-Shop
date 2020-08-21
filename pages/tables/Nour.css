@@ -1,3 +1,4 @@
+/*Body*/
 html,body{
     direction: rtl;
     text-align:right;
@@ -12,6 +13,7 @@ html,body{
     margin-left: 0px !important;
     margin-right: 250px !important;
 }
+/*Table Edit buttons*/
 .edit{
     padding: 7px 0px;
 }
@@ -36,12 +38,13 @@ html,body{
     width:49px ;
     text-align: center !important;
   }
-  
+/*Top Nav*/  
 .nour-nav{
     display: flex;
     justify-content: space-between;
     padding-left: 100px;
 }
+/*Top Nav Dropdown*/
 .nour-nav .dropbtn{
   width:auto;
 }
@@ -62,11 +65,6 @@ html,body{
   }
   .dropbtn:hover, .dropbtn:focus {
     outline: none !important;
-    /*border:none;
-    background-color: white;
-    color: #4f5962;
-    border: 1px solid  #4f5962;
-    box-sizing: border-box !important;*/
   }
   
   .dropdown {
@@ -95,9 +93,6 @@ html,body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
-    
-    
   }
   .dropdown-main-content span{
     color:#4f5962;
@@ -114,23 +109,23 @@ html,body{
   color: white;
   border: none;
 }
-  .dropdown a:hover {background-color: #ddd;}
+.dropdown a:hover {background-color: #ddd;}
   
-  .show {display: block;}
-  footer{
-    text-align: center !important;
-}
-@media (min-width: 992px){
-.sidebar-mini.sidebar-collapse .content-wrapper, .sidebar-mini.sidebar-collapse .main-footer, .sidebar-mini.sidebar-collapse .main-header {
-    margin-left: 0rem!important;
-   /* width: 100% !important;*/
-   margin-right: 74px !important;
-}
-}
+.show {display: block;}
 
+/*Table*/
+.table-header{
+  color:hsl(210, 3%, 25%) !important;
+}
+.table-header button{
+  color:hsl(210, 3%, 25%) !important;
+  border:2px solid hsl(210, 3%, 25%) ;
+  box-sizing: border-box;
+  margin-right: 10px !important;
+}
+/*--------------------*/
 
-
-/*POPUP*/
+/*------POPUP-------*/
 
 #myImg {
   cursor: pointer;
@@ -281,6 +276,7 @@ position: absolute;
     width: 100%;
   }
 }
+/*End popup edit*/
 /*
 font-family: 'Yeseva One', ;
 font-family: 'Lato', ;
@@ -290,12 +286,21 @@ font-family: 'Lato', ;
       height:100vh;
     }
 }*/
-.owl-dots{
+/*.owl-dots{
   position: absolute;
   top:600px;
   right:50%;
-}
-/*responsive*/
+}*/
+
+/*Responsive Edit*/
+@media (min-width: 992px){
+  .sidebar-mini.sidebar-collapse .content-wrapper, .sidebar-mini.sidebar-collapse .main-footer, .sidebar-mini.sidebar-collapse .main-header {
+      margin-left: 0rem!important;
+     /* width: 100% !important;*/
+     margin-right: 74px !important;
+  }
+  }
+  /*responsive*/
 @media (max-width: 991.98px){
   .content-wrapper{
     width:100% !important;
