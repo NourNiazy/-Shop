@@ -314,10 +314,10 @@ font-family: 'Lato', ;
    /* width: 100% !important;*/
    margin-right: 0px !important;
 }
-aside{
-  width: 0px !important;
-}
   #sidebar-overlay{
 
+  }
+  aside{
+    width: 0px !important;
   }
 }
