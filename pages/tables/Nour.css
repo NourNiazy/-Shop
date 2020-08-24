@@ -320,4 +320,20 @@ font-family: 'Lato', ;
   aside{
     width: 0px !important;
   }
+  .navbar-nav{
+    padding-right: 0px !important;
+  }
+  .dropdown{
+    padding-left: 10px !important;
+  }
+  .dataTables_filter.dataTables_length{
+    font-size: 14px !important;
+  }
+  .dataTables_info{
+    font-size: 14px !important;
+    margin-bottom: 8px;
+  }
+  .pagination a{
+    font-size: 10px !important;
+  }
 }

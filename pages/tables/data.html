@@ -818,6 +818,9 @@
     $("#example1").DataTable({
       "responsive": true,
       "autoWidth": false,
+      "language":{
+                "url":"nour.json"
+              }
     });
     $('#example2').DataTable({
       "paging": true,
@@ -876,14 +879,7 @@ span.onclick = function() {
   modal.style.display = "none";
 }
     </script>
-   <!--<script>
-         $(example1).DataTable({
-              "language":{
-                "url":"nour.json"
-              }
-            });
-     console.log("Arabic");
-    </script>-->
+  
     <script src="nour.json"></script>
     
 </body>
