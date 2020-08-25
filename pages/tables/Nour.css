@@ -309,6 +309,12 @@ font-family: 'Lato', ;
   }
   /*responsive*/
 @media (max-width: 992px){
+  .col-nour{
+    padding:0px !important;
+  }
+  .dataTables_length{
+    text-align: right !important;
+  }
   .brand-link img{
     margin: 0px !important;
 
@@ -328,7 +334,9 @@ font-family: 'Lato', ;
   .main-sidebar{
      width: 15% !important;
   }
-
+  .dataTables_filter input {
+    margin-left: 0em;
+}
   .main-sidebar.brand-text,.font-weight-light{
     font-size: 0px;
   }
