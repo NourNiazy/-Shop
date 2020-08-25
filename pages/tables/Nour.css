@@ -101,7 +101,7 @@ html,body{
     flex-direction: column;
   }
   .dropdown-main-content span{
-    color:#4f5962;
+    color:hsl(210, 3%, 25%);
     margin:7px 0px ;
   }
   .dropdown-main-content img{
@@ -111,7 +111,7 @@ html,body{
   }
 
 .dropdown-main-content button{
-  background:#4f5962 ;
+  background:hsl(210, 3%, 25%) ;
   color: white;
   border: none;
 }
@@ -335,7 +335,7 @@ font-family: 'Lato', ;
      width: 15% !important;
   }
   .dataTables_filter input {
-    margin-left: 0em;
+    margin-left: 0em !important;
 }
   .main-sidebar.brand-text,.font-weight-light{
     font-size: 0px;
