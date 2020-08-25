@@ -309,17 +309,41 @@ font-family: 'Lato', ;
   }
   /*responsive*/
 @media (max-width: 992px){
-  .sidebar-mini.sidebar-collapse .content-wrapper, .sidebar-mini.sidebar-collapse .main-footer, .sidebar-mini.sidebar-collapse .main-header {
-    margin-left: 0rem!important;
-   /* width: 100% !important;*/
-   margin-right: 0px !important;
-}
-  #sidebar-overlay{
+  .brand-link img{
+    margin: 0px !important;
 
   }
-  aside{
-    width: 0px !important;
+  nav ul{
   }
+  .main-header{
+    display: flex;
+    justify-content: flex-end;
+  }
+  .navbar-nav{
+    display: none;
+  }
+  #sidebar-overlay{
+    display: none;
+  }
+  .main-sidebar{
+     width: 15% !important;
+  }
+
+  .main-sidebar.brand-text,.font-weight-light{
+    font-size: 0px;
+  }
+  .main-sidebar:hover{
+    width: 50% !important;
+  }
+  .main-sidebar:hover .font-weight-light{
+    width: 50% !important;
+    font-size: 20px;
+  } 
+  .sidebar-mini.sidebar-collapse .content-wrapper, .sidebar-mini.sidebar-collapse .main-footer, .sidebar-mini.sidebar-collapse .main-header {
+    margin-left: 0rem!important;
+  width: 85% !important;
+   margin-right: 15% !important;
+}
   .navbar-nav{
     padding-right: 0px !important;
   }
@@ -332,8 +356,15 @@ font-family: 'Lato', ;
   .dataTables_info{
     font-size: 14px !important;
     margin-bottom: 8px;
+
   }
   .pagination a{
     font-size: 10px !important;
+    padding: .2rem .45rem !important;
   }
+  
+
+.sidebar-open{
+  display:none !important;
+}
 }
