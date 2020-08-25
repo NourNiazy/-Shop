@@ -312,7 +312,7 @@ font-family: 'Lato', ;
   .col-nour{
     padding:0px !important;
   }
-  .dataTables_length{
+  .dataTables_length,.dataTables_filter{
     text-align: right !important;
   }
   .brand-link img{
