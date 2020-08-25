@@ -319,8 +319,6 @@ font-family: 'Lato', ;
     margin: 0px !important;
 
   }
-  nav ul{
-  }
   .main-header{
     display: flex;
     justify-content: flex-end;
@@ -334,10 +332,19 @@ font-family: 'Lato', ;
   .main-sidebar{
      width: 15% !important;
   }
+  .sidebar .info{
+    font-size: 0px;
+  } 
+  nav .nav-icon{
+    display: none;
+  }
+  .main-sidebar:hover .info{
+    font-size: 16px;
+  } 
   .dataTables_filter input {
     margin-left: 0em !important;
 }
-  .main-sidebar.brand-text,.font-weight-light{
+  .main-sidebar.brand-text,.font-weight-light,nav{
     font-size: 0px;
   }
   .main-sidebar:hover{
@@ -346,6 +353,9 @@ font-family: 'Lato', ;
   .main-sidebar:hover .font-weight-light{
     width: 50% !important;
     font-size: 20px;
+  } 
+  .main-sidebar:hover nav{
+    font-size: 16px;
   } 
   .sidebar-mini.sidebar-collapse .content-wrapper, .sidebar-mini.sidebar-collapse .main-footer, .sidebar-mini.sidebar-collapse .main-header {
     margin-left: 0rem!important;
