@@ -18,7 +18,7 @@ html,body{
     padding: 7px 0px;
 }
   .edit-btn{
-    background: hsl(210, 3%, 25%);
+    background: #343a40;
     color:  white;
     border: none;
     height:28px ;
@@ -55,8 +55,8 @@ html,body{
   width:auto;
 }
   .dropbtn {
-    background-color: hsl(210, 3%, 25%);
-    color: white;
+    background-color: white;
+    color: #343a40;
     padding: 8px;
     font-size: 16px;
     border: none;
@@ -101,7 +101,7 @@ html,body{
     flex-direction: column;
   }
   .dropdown-main-content span{
-    color:hsl(210, 3%, 25%);
+    color:#343a40;
     margin:7px 0px ;
   }
   .dropdown-main-content img{
@@ -111,7 +111,7 @@ html,body{
   }
 
 .dropdown-main-content button{
-  background:hsl(210, 3%, 25%) ;
+  background:#343a40 ;
   color: white;
   border: none;
 }
@@ -121,11 +121,11 @@ html,body{
 
 /*Table*/
 .table-header{
-  color:hsl(210, 3%, 25%) !important;
+  color:#343a40 !important;
 }
 .table-header button{
-  color:hsl(210, 3%, 25%) !important;
-  border:2px solid hsl(210, 3%, 25%) ;
+  color:#343a40 !important;
+  border:2px solid #343a40 ;
   box-sizing: border-box;
   margin-right: 10px !important;
 }
@@ -171,23 +171,23 @@ html,body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: hsl(210, 3%, 25%);
+  color: #343a40;
 
 }
 .modal-content .register-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: hsl(210, 3%, 25%);
+    color: #343a40;
 }
 .modal-content .register-form  option:disabled{
   color: #b6b4b4 !important;
 }
 .modal-content .register-form  option{
-  color:  hsl(210, 3%, 25%) !important;
+  color:  #343a40 !important;
 }
 .modal-content .register-form  select{
-  color: hsl(210, 3%, 25%) !important;
+  color: #343a40!important;
 }
 .modal-content .register-form input{
   border: 1px solid #d1cfcf;
@@ -233,7 +233,7 @@ html,body{
 .modal-content .register-form .form-btn button{
     border: none;
     color: white;
-    background-color: #4f5962;
+    background-color: #343a40;
     padding: 10px 20px;
     margin-top: 10px;
   
