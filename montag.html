@@ -1,0 +1,1621 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>مجدى</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <!--Nour Edit-->
+  <link rel="stylesheet" href="dist/css/Nour.css">
+  <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light nour-nav">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+     <!-- <li class="nav-item d-none d-sm-inline-block">
+        <a href="../../index3.html" class="nav-link">Home</a>
+      </li>-->
+      <!-- <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link">Contact</a>
+      </li>-->
+    </ul>
+    <div class="dropdown">
+      <button onclick="myFunction()" class="dropbtn"><img src="dist/img/1.png" alt="">اسم المستخدم</button>
+      <div id="myDropdown" class="dropdown-content">
+        <div class="dropdown-main-content">
+          <img src="dist/img/1.png" alt="">
+          <span>اسم المستخدم</span>
+          <button class="button">خروج</button>
+        </div>  
+      </div>
+    </div>
+
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="../../index3.html" class="brand-link">
+      <img src="../../dist/img/AdminLTELogo.png"
+           alt="AdminLTE Logo"
+           class="brand-image img-circle elevation-3"
+           style="opacity: .8">
+      <span class="brand-text font-weight-light">مجدى مجدى</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="../../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">مجدى مجدى </a>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <li class="nav-item">
+            <a href="data.html" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+              <p>مديرين</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="montag.html" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+              <p>منتجات</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="فئات.html" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+              <p>فئات</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="../../index.html" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+              <p>فواتير</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="../../index.html" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+              <p>فواتير</p>
+            </a>
+          </li>
+         
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper" >
+    <!-- Content Header (Page header) -->
+    <section class="content-header table-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1> المنتجات </h1>
+          </div>
+          <!--<div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">DataTables</li>
+            </ol>
+          </div>-->
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-nour">
+            <div class="card">
+             
+            </div>
+            <!-- /.card -->
+
+            <div class="card">
+              <!-- <div class="card-header">
+                <h3 class="card-title">عنوان الجدول</h3>
+              </div>-->
+              <!-- /.card-header -->
+              <div class="card-body" >
+                <table id="example1"class="table table-bordered table-striped">
+                  <thead>
+                  <tr>
+                    <th class="name">الأسم </th>
+                    <th class="phone">الفئه</th>
+                    <th class="email">العدد</th>
+                    <th class="position">سعر الشراء</th>
+                    <th class="position">سعر البيع</th>
+                    <th class="edit"> تعديل</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn " id="myImg">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">بولو </td>
+                    <td class="phone">بنطلون</td>
+                    <td class="email">5</td>
+                    <td class="position">100</td>
+                    <td class="position">120</td>
+                    <td class="edit">
+                        <button class="button edit-btn ">تعديل</button>
+                        <button class="button delete-btn">حذف</button>
+                    </td>
+                  </tr>
+                  </tbody>
+                  <tfoot>
+                  <tr>
+                    <th class="name">الأسم </th>
+                    <th class="phone">الفئه</th>
+                    <th class="email">العدد</th>
+                    <th class="position">سعر الشراء</th>
+                    <th class="position">سعر البيع</th>
+                    <th class="edit"> تعديل</th>
+                  </tr>
+                  </tfoot>
+                </table>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <!--<footer class="main-footer">
+    <div class="float-right d-none d-sm-block">
+      <b>Version</b> 3.0.5
+    </div>
+    <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong> All rights
+    reserved.
+  </footer>-->
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <div class="modal-content" id="img01">
+      <div class="form-header">
+        <h3> تسجيل مستخدم جديد</h3>
+       
+      </div>
+      <form class="register-form">
+        <label for="">الأسم </label>
+        <input type="text" placeholder="الأسم ">
+        <label for="">الفئه </label>
+        <input type="text" placeholder="الفئه ">
+        <label for="">العدد</label>
+        <input type="email" placeholder="العدد">
+        <label for=""> سعر الشراء</label>
+        <input type="password" placeholder=" سعر الشراء ">
+        <label for="">سعر البيع   </label>
+        <input type="password"placeholder=" سعر البيع    ">
+       
+        <div class="form-btn">
+          <button>حفظ التعديلات</button>
+        </div>
+      </form>
+          
+  </div>
+</div>
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- DataTables -->
+<script src="plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+
+<!-- page script -->
+<script>
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true,
+      "autoWidth": false,
+      "language":{
+                "sProcessing": "جارٍ التحميل...",
+                "sLengthMenu": "أظهر _MENU_ مدخلات",
+                "sZeroRecords": "لم يعثر على أية سجلات",
+                "sInfo": "إظهار _START_ إلى _END_ من أصل _TOTAL_ مدخل",
+                "sInfoEmpty": "يعرض 0 إلى 0 من أصل 0 سجل",
+                "sInfoFiltered": "(منتقاة من مجموع _MAX_ مُدخل)",
+                "sInfoPostFix": "",
+                "sSearch": "ابحث:",
+                "sUrl": "",
+                "oPaginate": {
+                    "sFirst": "الأول",
+                    "sPrevious": "السابق",
+                    "sNext": "التالي",
+                    "sLast": "الأخير"
+              }
+      }
+    });
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+    console.log("responsive");
+  });
+
+</script>
+<!-- Nour Edit -->
+<script>
+    /*dropdown*/ 
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+<script>
+   var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+    </script>
+  
+    <script src="dist/js/nour.json"></script>
+    
+</body>
+</html>
