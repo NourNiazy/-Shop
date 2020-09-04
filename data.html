@@ -162,7 +162,7 @@
                   <th class="edit"> تعديل</th>
                   </tr>
                   </thead>
-                  <tbody>
+                  <tbody id="tBody">
                   <tr>
                     <td class="name">احمد محمد</td>
                     <td class="phone">01010097979</td>
@@ -835,8 +835,7 @@
                     "sNext": "التالي",
                     "sLast": "الأخير"
               }
-      },
-      "ajax":"dist/js/nour.json"
+      }
   
     });
     $('#example2').DataTable({
@@ -854,6 +853,18 @@
 </script>
 <!-- Nour Edit -->
 <script>
+  // $.getJSON("dist/js/nour.json",function(data){
+  //   var itemss=[];
+  //   $.each(data,function(key,val){
+  //     itemss.push("<tr>");
+  //     itemss.push("<td id=''"+key+"''>"+val.name+"</td>");
+  //     itemss.push("<td id=''"+key+"''>"+val.phone+"</td>");
+  //     itemss.push("<td id=''"+key+"''>"+val.email+"</td>");
+  //     itemss.push("<td id=''"+key+"''>"+val.position+"</td>");
+  //     itemss.push("</tr>");
+  //   });
+  //   $('<tbody/>',{html:itemss.join("")}).appendTo("#tBody");
+  // });
     /*dropdown*/ 
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
